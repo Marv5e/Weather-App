@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import WeatherForm from './components/WeatherForm'
 import WeatherResult from './components/WeatherResult'
 
@@ -9,6 +9,14 @@ export default function HomePage() {
   const [forecastData, setForecastData] = useState<any>(null)
   const [error, setError] = useState<string | null>(null)
   const [loading, setLoading] = useState(false)
+
+  useEffect(() => {
+    const lastCity = localStorage.getItem('lastCity')
+    if (lastCity) {
+      handleSearch(lastCity)
+    }
+  }, [])
+
 
   const toggleDarkMode = () => {
     document.documentElement.classList.toggle('dark')
@@ -39,6 +47,8 @@ export default function HomePage() {
 
       setCurrentData(currentJson)
       setForecastData(forecastJson)
+
+      localStorage.setItem('lastCity', city)
     } catch (err) {
       setError('Invalid city name.')
     } finally {
