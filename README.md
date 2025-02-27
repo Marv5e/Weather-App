@@ -23,11 +23,9 @@ A **Next.js 13** (App Router) Weather Application using:
 1. **City Search**:
    - Users can enter a city name (e.g., “London”) and get current weather data (temperature, condition, icon).
 2. **5-Day Forecast**:
-   - Displays a short list of 5 upcoming forecast entries (you can customize times/dates as needed).
+   - Displays a short list of 5 upcoming forecast entries.
 3. **Dark Mode**:
    - A toggle button in the top-right corner switches between light and dark themes by toggling the `dark` class on `html`.
-4. **Local Storage**:
-   - Remembers the last searched city. When you revisit or refresh the page, it will auto-fetch that city’s weather data.
 
 ---
 
