@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Weather App
+
+A **Next.js 13** (App Router) Weather Application using:
+
+- [Shadcn UI](https://ui.shadcn.com) for React components (Button, Input, Card)
+- [Tailwind CSS](https://tailwindcss.com) for utility-first styling
+- [OpenWeather API](https://openweathermap.org/api) for weather data
+- Local Storage for remembering the last searched city
+- Simple Dark Mode toggle (using Tailwind’s `darkMode: ["class"]`)
+
+## Table of Contents
+
+1. [Features](#features)
+2. [Tech Stack](#tech-stack)
+3. [Getting Started](#getting-started)
+4. [Environment Variables](#environment-variables)
+5. [Usage](#usage)
+
+---
+
+## Features
+
+1. **City Search**:
+   - Users can enter a city name (e.g., “London”) and get current weather data (temperature, condition, icon).
+2. **5-Day Forecast**:
+   - Displays a short list of 5 upcoming forecast entries (you can customize times/dates as needed).
+3. **Dark Mode**:
+   - A toggle button in the top-right corner switches between light and dark themes by toggling the `dark` class on `html`.
+4. **Local Storage**:
+   - Remembers the last searched city. When you revisit or refresh the page, it will auto-fetch that city’s weather data.
+
+---
+
+## Tech Stack
+
+- **Next.js 15** 
+- **React 19+** 
+- **TypeScript** 
+- **Tailwind CSS** 
+- **Shadcn UI** 
+- **OpenWeather API** 
+
+---
 
 ## Getting Started
+1. Run npm i in the terminal
+2. Create a file named .env.local in the project root: OPENWEATHER_API_KEY=YOUR_OPENWEATHER_API_KEY_HERE Replace with actual Openweather key
 
-First, run the development server:
+## Usage
+1. Run npm run dev to start the app
+2. Search for city and find the weather!
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Enjoy!
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
