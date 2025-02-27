@@ -1,4 +1,3 @@
-// src/app/components/WeatherResult.tsx
 import { Card } from '../../../components/ui/card'
 
 interface ForecastItem {
